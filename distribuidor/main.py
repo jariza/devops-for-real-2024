@@ -12,7 +12,7 @@ app.register_blueprint(routes)
 app.config.update(
     LOG_LEVEL = "INFO",
     CACHE_TIME = 5,
-    GENERATOR_HOST = "127.0.0.1:5000"
+    GENERATOR_HOST = "127.0.0.1:5001"
 )
 app.config.from_prefixed_env("DISTRIBUITOR")
 
