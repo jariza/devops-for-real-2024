@@ -12,8 +12,8 @@ tempfolder = TemporaryDirectory()
 def generate_image(key):
     img = Image.new("RGB", (500, 500))
     draw = ImageDraw.Draw(img)
-    draw.multiline_text((10, 10), f"Imagen {key}", font=ImageFont.truetype("/usr/share/fonts/truetype/freefont/FreeMono.ttf", 75, encoding="unic"))
-    draw.multiline_text((10, 100), datetime.now().strftime("%H:%M:%S"), font=ImageFont.truetype("/usr/share/fonts/truetype/freefont/FreeMono.ttf", 75, encoding="unic"))
+    draw.multiline_text((10, 10), f"Anuncio {key}", font=ImageFont.load_default(size=75))
+    draw.multiline_text((10, 100), datetime.now().strftime("%H:%M:%S"), font=ImageFont.load_default(size=75))
     img.save(f"{tempfolder.name}/{key}.jpg")
 
 # Returns OK if images are still fresh, KO otherwise
